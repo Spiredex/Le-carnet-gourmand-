@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez nos pâtes crémeuses au citron et partagez votre avis sur Le Carnet Gourmand.">
+    <title>Pâtes crémeuses au citron — Le Carnet Gourmand</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container brand">
+            <span class="brand-logo" aria-hidden="true">🍲</span>
+            <div>
+                <p class="brand-name">Le Carnet Gourmand</p>
+                <p class="brand-subtitle">Avis des lecteurs</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-layout">
+        <article class="card" aria-labelledby="recipe-title">
+            <h1 id="recipe-title">Pâtes crémeuses au citron</h1>
+            <p class="recipe-introduction">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+            <div class="recipe-details">
+                <h2>Ingrédients</h2>
+                <ul>
+                    <li>Pâtes</li>
+                    <li>Crème</li>
+                    <li>Citron</li>
+                    <li>Parmesan</li>
+                </ul>
+                <h2>Préparation</h2>
+                <ol>
+                    <li>Cuire les pâtes.</li>
+                    <li>Mélanger la crème et le citron.</li>
+                    <li>Ajouter le parmesan.</li>
+                </ol>
+            </div>
+        </article>
+
+        <section class="card" aria-labelledby="form-title">
+            <h2 id="form-title">Laisser un commentaire</h2>
+            <form id="comment-form" novalidate>
+                <div class="form-field">
+                    <label for="author">Votre nom</label>
+                    <input id="author" name="author" type="text" placeholder="Ex : Léa" autocomplete="name" minlength="2" required aria-describedby="author-help">
+                    <p class="field-help" id="author-help">Minimum 2 caractères</p>
+                </div>
+                <div class="form-field">
+                    <label for="comment">Votre commentaire</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Votre avis sur la recette..." minlength="10" required aria-describedby="comment-help"></textarea>
+                    <p class="field-help" id="comment-help">Minimum 10 caractères</p>
+                </div>
+                <button class="publish-button" type="submit">Publier</button>
+            </form>
+            <p id="form-error" class="error-message" role="alert" hidden></p>
+            <p id="comment-status" class="visually-hidden" role="status"></p>
+            <noscript><p>Activez JavaScript pour publier et supprimer des commentaires.</p></noscript>
+
+            <h2 id="comments-title">Commentaires</h2>
+            <div id="comments-list" class="comments-list" aria-labelledby="comments-title">
+                <article class="comment-card">
+                    <h3 class="comment-author">Téo</h3>
+                    <p class="comment-text">Superbe recette !</p>
+                    <button type="button" class="delete-button" aria-label="Supprimer le commentaire de Téo">🗑️ Supprimer</button>
+                </article>
+                <article class="comment-card">
+                    <h3 class="comment-author">Léa</h3>
+                    <p class="comment-text">Test de commentaire</p>
+                    <button type="button" class="delete-button" aria-label="Supprimer le commentaire de Léa">🗑️ Supprimer</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="container">Devoir JavaScript — Frontend</p>
+    </footer>
+</body>
+</html>
